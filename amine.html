@@ -7,25 +7,27 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="heart-counter">❤️ x <span id="count">0</span></div>
-
     <header>
-<h1>le site de amine</h1>
+<h1>LE SITE DE AMINE</h1>
         <p><a href="index.html">← Accéder à ma galerie</a></p>
     </header>
 
     <main>
-        <section>
-            <h2> À propos de moi</h2>
-            <p>
-            Je m'appelle Amine, je suis un passionné de football et de développement web. J'adore créer des projets qui combinent mes deux passions!</p>
-            <button class="action-btn"> CLIQUEZ ICI!</button>
-        </section>
+        <div class="container">
+            <section class="about-section">
+                <h2>À propos de moi</h2>
+                <p>Je m'appelle Amine, je suis un passionné de football et de développement web. J'adore créer des projets qui combinent mes deux passions!</p>
+                <div class="button-counter-row">
+                    <button class="action-btn">CLIQUEZ ICI!</button>
+                    <div id="heart-counter">❤️ x <span id="count">0</span></div>
+                </div>
+            </section>
 
-        <section style="margin-top: 30px;">
-            <h2> Mes Projets</h2>
-            <p>Découvre mes meilleurs projets de football et de développement web!</p>
-        </section>
+            <section class="projects-section">
+                <h2>Mes Projets</h2>
+                <p>Découvre mes meilleurs projets de football et de développement web!</p>
+            </section>
+        </div>
     </main>
 
     <footer>

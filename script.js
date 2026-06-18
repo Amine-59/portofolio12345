@@ -33,37 +33,11 @@ document.addEventListener('mouseout', (e) => {
 
 let heartCount = 0;
 
-function createStaticHearts(e) {
-  const centerX = e.pageX || window.innerWidth / 2;
-  const centerY = e.pageY || window.innerHeight / 2;
-  const radius = 80;
-
-  for (let i = 0; i < 8; i++) {
-    const heart = document.createElement('div');
-    heart.className = 'flying-heart';
-    heart.textContent = '❤️';
-    
-    const angle = (i / 8) * Math.PI * 2;
-    const x = centerX + Math.cos(angle) * radius;
-    const y = centerY + Math.sin(angle) * radius;
-    
-    heart.style.left = x + 'px';
-    heart.style.top = y + 'px';
-    
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 1000);
-  }
-
-  // Increment counter
-  heartCount++;
-  document.getElementById('count').textContent = heartCount;
-}
-
-// Attach hearts to all buttons
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.action-btn');
   if (btn) {
-    createStaticHearts(e);
+    heartCount += 1;
+    document.getElementById('count').textContent = heartCount;
   }
 });
 
