@@ -255,6 +255,7 @@ section:hover {
 .section-img {
     width: 100%;
     border-radius: 16px;
+    height: 180px;
     border: none;
     box-shadow: none;
     object-fit: cover;
